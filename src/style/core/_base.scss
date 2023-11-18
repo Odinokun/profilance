@@ -34,6 +34,16 @@ p {
   margin: 0 0 10px 0;
 }
 
+a {
+  transition: color .3s ease-in-out;
+  text-decoration: none;
+  color: $primary-white;
+
+  &:hover {
+    color: $secondary-buff;
+  }
+}
+
 ol,
 ul {
   li {
@@ -61,7 +71,6 @@ input,
 textarea,
 select,
 button {
-  border-radius: 0 !important;
   outline: none;
 }
 
@@ -91,7 +100,7 @@ svg {
   margin: 0 auto;
   padding: 0 16px;
 
-  @include min(762) {
+  @include min(768) {
     padding: 0 32px;
   }
   @include min(1024) {
