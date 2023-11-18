@@ -1,5 +1,27 @@
 module.exports = function () {
 
+  const PartnersSlider = new Swiper("#partners-slider", {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        580: {
+          loop: false,
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        768: {
+          loop: false,
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+      },
+
+  });
+
   // const clinicThumb = new Swiper("#clinic-slider-sm", {
   //   slidesPerView: 1,
   //   spaceBetween: 20,
