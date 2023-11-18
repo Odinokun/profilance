@@ -15,7 +15,7 @@ html {
   font-family: $mont;
   font-size: 16px;
   line-height: 1.38;
-  color: #141414;
+  color: $primary-green;
 }
 
 body {
@@ -31,7 +31,6 @@ h4,
 h5,
 h6,
 p {
-  font-weight: 400;
   margin: 0 0 10px 0;
 }
 
@@ -89,7 +88,19 @@ svg {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 16px;
+
+  @include min(762) {
+    padding: 0 32px;
+  }
+  @include min(1024) {
+    padding: 0 48px;
+  }
+  @include min(1200) {
+    padding: 0 64px;
+  }
+  @include min(1440) {
+    padding: 0 80px;
+  }
 }

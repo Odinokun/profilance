@@ -1,0 +1,98 @@
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: $barlow;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  color: $primary-green;
+}
+
+.h1 {
+  @include responsive-font(64, 48);
+}
+
+.h2 {
+  @include responsive-font(48, 40);
+}
+
+.h3 {
+  @include responsive-font(36, 32);
+}
+
+.h4 {
+  font-weight: 400;
+
+  @include responsive-font(32, 24);
+}
+
+.overline {
+  font-family: $mont;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.body-1 {
+  font-family: $mont;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.body-2 {
+  font-family: $mont;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.quotes-1 {
+  font-family: $barlow;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include responsive-font(48, 36);
+}
+
+.quotes-2 {
+  font-family: $barlow;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include responsive-font(32, 24);
+}
+
+.links {
+  font-family: $mont;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.menu {
+  font-family: $mont;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.button {
+  font-family: $mont;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+}
