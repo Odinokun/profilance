@@ -19,10 +19,10 @@
   border-radius: 30px;
   background-color: $primary-gold;
   box-shadow: none;
+
   @include responsive-font(18, 16);
   @include min(1024) {
-
-  height: 53px;
+    height: 53px;
   }
 
   &:hover {

@@ -91,8 +91,8 @@
 }
 
 .footer-middle__title {
-  margin-bottom: 32px;
   font-size: 32px;
+  margin-bottom: 32px;
   color: $primary-gold;
 
   @include min(768) {
