@@ -4,22 +4,35 @@ module.exports = function () {
     slidesPerView: 2,
     spaceBetween: 20,
     loop: true,
-      autoplay: {
-        delay: 3000,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      580: {
+        loop: false,
+        slidesPerView: 5,
+        spaceBetween: 20,
       },
-      breakpoints: {
-        580: {
-          loop: false,
-          slidesPerView: 5,
-          spaceBetween: 20,
-        },
-        768: {
-          loop: false,
-          slidesPerView: 5,
-          spaceBetween: 30,
-        },
+      768: {
+        loop: false,
+        slidesPerView: 5,
+        spaceBetween: 30,
       },
+    },
 
+  });
+
+  const heroSlider = new Swiper("#hero-slider", {
+    direction: "vertical",
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+    },
+    loop: true,
+    pagination: {
+      el: ".hero-slider__pagination",
+      clickable: true,
+    },
   });
 
   // const clinicThumb = new Swiper("#clinic-slider-sm", {

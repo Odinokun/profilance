@@ -1,6 +1,6 @@
 mixin item(title, image)
   //begin services-item
-  .services-item
+  a(href="/").services-item
     .services-item__image
       img(src="assets/img/service-" + image + ".jpg" alt=title)
     .h3.services-item__title-sm= title
