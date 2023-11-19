@@ -104,9 +104,6 @@ svg {
     padding: 0 32px;
   }
   @include min(1024) {
-    padding: 0 48px;
-  }
-  @include min(1200) {
     padding: 0 64px;
   }
   @include min(1440) {

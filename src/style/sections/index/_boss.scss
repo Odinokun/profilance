@@ -1,0 +1,136 @@
+.boss {
+  .container {
+    padding: 0;
+
+    @include min(1024) {
+      padding: 0 64px;
+    }
+    @include min(1440) {
+      padding: 0 80px;
+    }
+  }
+}
+
+/* begin SLOGAN */
+.boss-slogan {
+  margin-bottom: 8px;
+  padding: 40px 16px;
+  background-color: $primary-green;
+
+  @include min(768) {
+    padding: 40px 32px;
+  }
+  @include min(1024) {
+    padding: 40px 64px;
+    border-radius: 16px;
+  }
+  @include min(1440) {
+    padding: 56px 80px;
+  }
+}
+
+.boss-slogan__text {
+  margin-bottom: 0;
+  color: $secondary-buff;
+}
+
+/* end   SLOGAN */
+
+/* begin BANNER */
+.boss-banner {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #f3e6d9;
+
+  @include min(768) {
+    display: block;
+  }
+  @include min(1024) {
+    border-radius: 16px;
+  }
+}
+
+.boss-banner__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 48px 16px;
+
+  @include min(768) {
+    max-width: 60%;
+    min-height: 500px;
+    padding: 0 32px;
+  }
+  @include min(1024) {
+    max-width: 640px;
+    min-height: 580px;
+    padding: 0 64px;
+  }
+  @include min(1200) {
+    min-height: 650px;
+  }
+  @include min(1440) {
+    padding: 0 80px;
+  }
+}
+
+.boss-banner__subtitle {
+  margin-bottom: 16px;
+  color: $primary-gold;
+
+  @include min(1024) {
+    margin-bottom: 24px;
+  }
+}
+
+.boss-banner__title {
+  margin-bottom: 24px;
+
+  @include min(1024) {
+    margin-bottom: 32px;
+  }
+}
+
+.boss-banner__text {
+  margin-bottom: 32px;
+  color: $secondary-body-text-1;
+
+  @include min(1024) {
+    margin-bottom: 40px;
+  }
+}
+
+.boss-banner__image {
+  position: relative;
+  left: 0;
+  width: calc(100% + 70px);
+  margin-top: -100px;
+
+  @include min(768) {
+    position: absolute;
+    top: 16px;
+    right: -100px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  @include min(1200) {
+    right: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+}
+
+/* end   BANNER */
