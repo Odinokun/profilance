@@ -1,0 +1,36 @@
+mixin item(title, image)
+  //begin services-item
+  .services-item
+    .services-item__image
+      img(src="assets/img/service-" + image + ".jpg" alt=title)
+    .h3.services-item__title-sm= title
+  //end services-item
+
+//begin services
+.services
+  .container
+    //begin services-item--double
+    .services-item.services-item--double
+      .services-item__content
+        .overline.services-item__subtitle WHAT WE DO
+        .h1.services-item__title Treatments
+        .body-1.services-item__text We offer a wide range of oral and facial surgery services, including sleep-related breathing disorder treatment, nasal corrections, pediatric surgery, aesthetics, and jaw joint issues.
+    //end services-item--double
+
+    +item('Nasenchirurgie', '01')
+    +item('Fehlbisse, Kieferchirurgie', '02')
+    +item('Kiefergelenks-beschwerden', '01')
+    +item('Korrektur von Unfallfolgen', '02')
+    +item('Schnarchen, Schlafapnoe', '01')
+    +item('Kieferknochen-Entzündungen', '02')
+    +item('Allgemeine Gesichtschirurgie', '01')
+    +item('Minimalinvasive Kosmetik', '02')
+
+    //begin services-item--double
+    .services-item.services-item--double
+      .services-item__content
+        .overline.services-item__subtitle Book a Consultation
+        .h1.services-item__title Unveil your new look. Consult with us today.
+        button.btn Book Appointment
+    //end services-item--double
+//end services
