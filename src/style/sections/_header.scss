@@ -1,24 +1,70 @@
-.main-wrap {
-  //if header STICKY
-  padding-top: 50px;
-}
-
 .header {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  min-height: 50px;
-  transition: top .4s;
-  background-color: $brand;
+  background-color: $primary-green;
+
   .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
-.header--scroll-down {
-  top: -100px;
+/* begin MIDDLE */
+.header__logo {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 233px;
+  }
 }
+
+/* end   MIDDLE */
+
+/* begin RIGHT */
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header-lang {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .25);
+  position: relative;
+}
+
+.header-lang__icon {
+  flex: none;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  left: 16px;
+  bottom: 0;
+
+  svg {
+    fill: #fff;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.header-lang__select {
+  & + .ui-selectmenu-button {
+    width: auto;
+    padding: 0 0 0 34px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+  }
+
+}
+
+/* end   RIGHT */

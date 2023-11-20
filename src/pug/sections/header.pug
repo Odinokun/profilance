@@ -1,0 +1,27 @@
+//begin header
+.header
+  .container
+    //begin left
+    .header__left
+    //end left
+
+    //begin middle
+    .header__middle
+      a(href="/").header__logo
+        img(src="assets/img/logo.png" alt="company logo")
+    //end middle
+
+    //begin right
+    .header__right
+      //begin header__lang
+      .header__lang.header-lang
+        .header-lang__icon
+          +svg('lang')
+        select#lang.header-lang__select
+          option Eng
+          option Ukr
+          option Deu
+      //end header__lang
+      button.btn Book Now
+    //end right
+//end header
