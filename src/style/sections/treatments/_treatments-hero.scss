@@ -1,6 +1,13 @@
 .treatments-hero {
-  padding-top: 40px;
   background-color: $primary-green;
+
+  .container {
+    transform: translateY(35px);
+    @include min(1024) {
+    transform: translateY(56px);
+
+    }
+  }
 }
 
 .treatments-hero__title {

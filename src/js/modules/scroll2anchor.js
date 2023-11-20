@@ -1,11 +1,11 @@
 module.exports = function() {
 
   $(function() {
-    $('nav a[href*=\\#]').on("click", function(e){
-       // e.preventDefault();
+    $('.treatments-left__nav-link[href*=\\#]').on("click", function(e){
+       e.preventDefault();
        let anchor = $(this);
        $('html, body').stop().animate({
-        scrollTop: $(anchor.attr('href')).offset().top - 0 + 'px'
+        scrollTop: $(anchor.attr('href')).offset().top - 24 + 'px'
        }, 1000);
     });
     return false;

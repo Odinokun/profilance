@@ -1,0 +1,119 @@
+/* begin SECTION 2 */
+.treatments-section__slider {
+  position: relative;
+  padding-left: 16px;
+
+  @include min(768) {
+    padding-left: 32px;
+  }
+  @include min(1024) {
+    padding-right: 40px;
+    padding-left: 0;
+  }
+}
+
+.treatments-slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+
+  @include min(768) {
+    height: 400px;
+  }
+  @include min(1024) {
+    height: 500px;
+  }
+}
+
+.treatments-slider__pagination {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  transform: translate(0, 18px);
+
+  @include min(1024) {
+    justify-content: flex-end;
+  }
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  transition: all .3s ease;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    background-color: $secondary-desert-sand;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid $primary-gold;
+
+  &::before {
+    background-color: $primary-gold;
+  }
+}
+
+.treatments-slider__slide {
+  overflow: hidden;
+  border-radius: 16px;
+
+
+  img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.treatments-slider__next {
+  display: none;
+
+  @include min(1024) {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    transform: translate(-12px, -50%);
+    border: 1px solid $secondary-buff;
+    border-radius: 50%;
+    background-color: $primary-white;
+  }
+
+  svg {
+    fill: $secondary-body-text-1;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* end   SECTION 2 */

@@ -1,0 +1,51 @@
+/* begin SECTION 5 */
+.treatments-section-tags-wrapper {
+  padding: 0 16px 40px 16px;
+
+  @include min(768) {
+    padding: 0 32px 40px 32px;
+  }
+  @include min(1024) {
+    padding: 0 40px 40px 40px;
+  }
+}
+
+.treatments-section-tags-title {
+  margin-bottom: 24px;
+  color: $primary-gold;
+
+  @include min(1024) {
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+}
+
+.treatments-section-tags {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.treatments-section-tag {
+  display: inline-block;
+  overflow: hidden;
+  width: min-content;
+  max-width: 100%;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 12px 20px;
+  transition: all .3s ease-in-out;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $secondary-body-text-1;
+  border: 1px solid $primary-gold;
+  border-radius: 30px;
+  background-color: $primary-white;
+
+  &:hover {
+    color: $secondary-body-text-1;
+    background-color: $secondary-almond;
+  }
+}
+
+/* end   SECTION 5 */
