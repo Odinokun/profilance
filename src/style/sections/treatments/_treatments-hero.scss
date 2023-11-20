@@ -1,0 +1,97 @@
+.treatments-hero {
+  padding-top: 40px;
+  background-color: $primary-green;
+}
+
+.treatments-hero__title {
+  margin-bottom: 40px;
+  text-align: center;
+  color: $primary-white;
+}
+
+.treatments-hero__banner {
+  position: relative;
+}
+
+.treatments-hero__banner-img {
+  overflow: hidden;
+  height: 300px;
+  border-radius: 16px;
+
+  @include min(768) {
+    height: 400px;
+  }
+  @include min(1024) {
+    height: 500px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* begin ROUND */
+.treatments-hero__round {
+  position: absolute;
+  z-index: 2;
+  top: -36px;
+  right: 10px;
+  overflow: hidden;
+  width: 72px;
+  height: 72px;
+  animation: spin 30s linear infinite;
+  border-radius: 50%;
+
+  @include min(1024) {
+    top: -40px;
+    right: -40px;
+    width: 100px;
+    height: 100px;
+  }
+  @include min(1200) {
+    top: -50px;
+    right: -50px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* end   ROUND */
+
+.treatments-hero__banner-text {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: min-content;
+  max-width: 80%;
+  padding: 12px;
+  color: $secondary-buff;
+  border-radius: 8px;
+  background-color: $primary-green;
+
+  @include min(640) {
+    width: auto;
+  }
+  @include min(1024) {
+    padding: 24px 32px;
+  }
+}
