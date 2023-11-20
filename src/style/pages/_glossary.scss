@@ -1,0 +1,26 @@
+.glossary {
+  padding-bottom: 40px;
+  background-color: $primary-green;
+  background-image: url('../img/decor-glossary.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+
+  @include min(1024) {
+    padding-bottom: 80px;
+  }
+}
+
+.glossary__header {
+  padding-top: 53px;
+  padding-bottom: 27px;
+}
+
+.glossary__subtitle {
+  margin-bottom: 24px;
+  color: $primary-gold;
+}
+
+.glossary__title {
+  margin-bottom: 0;
+  color: $primary-white;
+}

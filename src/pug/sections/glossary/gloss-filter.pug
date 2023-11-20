@@ -1,0 +1,39 @@
+mixin letter(title)
+  .glossary-filter__letter
+    input.glossary-filter__letter-input(type='radio' name='letters')
+    span.h4= title
+
+//begin glossary__filter
+.glossary__filter.glossary-filter
+  .glossary-filter__left
+    .glossary-filter__letter
+      input.glossary-filter__letter-input(type='radio' name='letters' checked)
+      span.h4 All
+  .glossary-filter__right
+    +letter('A')
+    +letter('B')
+    +letter('C')
+    +letter('D')
+    +letter('E')
+    +letter('F')
+    +letter('G')
+    +letter('H')
+    +letter('I')
+    +letter('J')
+    +letter('K')
+    +letter('L')
+    +letter('M')
+    +letter('N')
+    +letter('O')
+    +letter('P')
+    +letter('Q')
+    +letter('R')
+    +letter('S')
+    +letter('T')
+    +letter('U')
+    +letter('V')
+    +letter('W')
+    +letter('X')
+    +letter('Y')
+    +letter('Z')
+//end glossary__filter
