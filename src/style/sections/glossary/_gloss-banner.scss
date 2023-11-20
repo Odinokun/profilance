@@ -1,0 +1,46 @@
+.gloss-banner {
+  padding: 24px 16px;
+  border-radius: 16px;
+  background-color: $secondary-almond;
+  background-image: url('../img/decor-blog.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+
+  @include min(768) {
+    padding: 24px 40px;
+  }
+  @include min(1024) {
+    padding: 24px 40px;
+    background-image: url('../img/bg-gloss-banner-mob.jpg');
+    background-size: contain;
+  }
+  @include min(1200) {
+    padding: 40px 80px;
+    background-image: url('../img/bg-gloss-banner.jpg');
+  }
+}
+
+.gloss-banner__content {
+  @include min(1024) {
+    width: 600px;
+    max-width: 50%;
+  }
+}
+
+.gloss-banner__title {
+  margin-bottom: 24px;
+
+  @include min(1024) {
+    margin-bottom: 40px;
+  }
+}
+
+.gloss-banner__text {
+  max-width: 470px;
+  margin-bottom: 24px;
+  color: $secondary-body-text-1;
+
+  @include min(1024) {
+    margin-bottom: 40px;
+  }
+}
