@@ -1,0 +1,153 @@
+//begin treatments-content
+.treatments-content
+  .container
+    //begin treatments__left
+    .treatments__left
+      .treatments-left
+        //begin menu
+        .treatments-left__menu
+          .overline.treatments-left__menu-title table of contents
+          nav.treatments-left__nav
+            ul.treatments-left__nav-list
+              li.treatments-left__nav-item
+                a.treatments-left__nav-link.menu(href="#section-01") Ursachenanalyse im Schlaflabor
+              li.treatments-left__nav-item
+                a.treatments-left__nav-link.menu(href="#section-02") Konservative Behandlung mit Schienen (Zungenschrittmacher)
+              li.treatments-left__nav-item
+                a.treatments-left__nav-link.menu(href="#section-03") Operative Behandlung von Schlafapnoe (Unterkiefer-Osteotomie)
+              li.treatments-left__nav-item
+                a.treatments-left__nav-link.menu(href="#section-04") Häufige Fragen unserer PatientInnen
+              li.treatments-left__nav-item
+                a.treatments-left__nav-link.menu(href="#section-05") Ursachenanalyse im Schlaflabor
+        //end menu
+        a(href="/").treatments-left__share
+          +svg('share')
+    //end treatments__left
+
+    //begin treatments__right
+    .treatments__right
+      //begin treatments-section-01
+      .treatments-section#section-01
+        //begin text-block
+        .treatments-section__text-block
+          .treatments-section__item
+            .body-1 Schnarchen hat oft anatomische Gründe. Gemeinsam gehen wir der Ursache auf den Grund und entwickeln die ideale Behandlungsstrategie für Sie. Schnarchen hat oft anatomische Gründe. Gemeinsam gehen wir der Ursache auf den Grund und entwickeln die ideale Behandlungsstrategie für Sie.
+          h2.h2 Schlafanalyse im Labor oder bei Ihnen zu Hause
+          .treatments-section__item
+            .body-1 Bevor wir mit einer Behandlung beginnen, widmen wir uns intensiv der Ursachenermittlung von Schlafproblemen. Unsere Patientinnen können zwischen einer Untersuchung im Schlaflabor des Ärztehauses Fluntern und einem Schlaf-Tracking in den eigenen vier Wänden mithilfe der fortschrittlichen Sleepiz-Technologie wählen. 
+            .body-1 Eine weitere interessante Option ist der «Smart Ring», der den Sauerstoffgehaltdes Bluts permanent misst und die Daten direkt auf einer App zur Verfügung stellt.
+        //end text-block
+
+        //begin double-image
+        .treatments-section__double-image-wrapper
+          .treatments-section__double-image
+            picture
+              source(media="(min-width: 1024px)", srcset="assets/img/treatments-01@2x.jpg")
+              source(srcset="assets/img/treatments-01.jpg")
+              img(src="assets/img/treatments-01.jpg", alt="Image")
+          .treatments-section__double-text
+            .body-1 Oftmals kann schon eine Änderung des Lebensstils ausreichen, um Schnarchprobleme zu beheben. In schwerwiegenderen Fällen haben wir zwei Behandlungsoptionen zur Verfügung: eine Zungenschrittmacher-Therapie oder eine Operation des Unterkiefers, mit der die Schnarchursache direkt behoben wird.
+        //end double-image
+      //end treatments-section-01
+
+      //begin treatments-section-02
+      .treatments-section#section-02
+        .treatments-section__text-block
+          h2.h2 Konservative Behandlung mit Zahnschienen (Zungenschrittmacher)
+          .treatments-section__item
+            .body-1 Zum Stoppen des Schnarchens kann eine spezielle Zahnschiene helfen, auch «Zungenschrittmacher-Therapie» genannt. Diese Schiene wird beim Schlafen getragen und hilft, die Zunge in einer Position zu halten, die das Atmen erleichtert und gleichzeitig das Schnarchen verhindert. Dies ermöglicht einen erholsamen Schlaf ohne Beeinträchtigungen beim Atmen oder Sprechen. Ideal für alle, die nach einer komfortablen, nicht-invasiven Lösung für ihr Schnarchproblem suchen.
+            .body-1 Unsere «Schnarchschienen» werden individuell mithilfe von CAD-Design in unserem Partnerlabor in Zürich massgefertigt. Sie sind angenehm zu tragen und passen sich perfekt an den Mund an. Vier eingebaute Magneten halten die Kiefer sicher zusammen, lassen jedoch natürliche Mundbewegungen zu. Das widerstandsfähige und zugleich elastische Material sorgt für eine lange Lebensdauer.
+        //begin slider
+        .treatments-section__slider
+          .swiper.treatments-slider#treatments-slider
+            .swiper-wrapper
+              .swiper-slide.treatments-slider__slide
+                picture
+                  source(media="(min-width: 1024px)", srcset="assets/img/treatments-slider/slide-01@2x.jpg")
+                  source(srcset="assets/img/treatments-slider/slide-01.jpg")
+                  img(src="assets/img/treatments-slider/slide-01.jpg", alt="Image")
+              .swiper-slide.treatments-slider__slide
+                picture
+                  source(media="(min-width: 1024px)", srcset="assets/img/treatments-slider/slide-02@2x.jpg")
+                  source(srcset="assets/img/treatments-slider/slide-02.jpg")
+                  img(src="assets/img/treatments-slider/slide-02.jpg", alt="Image")
+              .swiper-slide.treatments-slider__slide
+                picture
+                  source(media="(min-width: 1024px)", srcset="assets/img/treatments-slider/slide-01@2x.jpg")
+                  source(srcset="assets/img/treatments-slider/slide-01.jpg")
+                  img(src="assets/img/treatments-slider/slide-01.jpg", alt="Image")
+              .swiper-slide.treatments-slider__slide
+                picture
+                  source(media="(min-width: 1024px)", srcset="assets/img/treatments-slider/slide-02@2x.jpg")
+                  source(srcset="assets/img/treatments-slider/slide-02.jpg")
+                  img(src="assets/img/treatments-slider/slide-02.jpg", alt="Image")
+          .treatments-slider__pagination
+          .treatments-slider__next
+            +svg('arr')
+        //end slider
+      //end treatments-section-02
+
+      //begin treatments-section-03
+      .treatments-section#section-03
+        .treatments-section__text-block
+          h2.h2 Operative Beseitigung des Schnarchens (Unterkiefer-Osteotomie)
+          .treatments-section__item
+            .body-1 Mit der Schlafapnoe-OP wird die anatomische Ursache des Schnarchens behoben. Ober- und Unterkiefer werden weiter nach vorne geschoben, somit bekommt auch die Zunge mehr Platz und die Atemwege werden erweitert größer.
+            .body-1 Bei der Behandlung von Schlafapnoe durch eine UK-Umstellungs-Osteotomie setzen wir auf eine sorgfältige Planung und präzise Durchführung, um Ihnen die bestmöglichen Ergebnisse zu garantieren.
+            .body-1 Es ist uns bewusst, dass nicht jede/r Schlafapnoe-PatientIn für diese spezielle Behandlung geeignet ist. Unsere Entscheidungen basieren immer auf einer genauen Diagnose, dem Grad der Schlafapnoe sowie individuellen Gesichts- und Kieferstrukturen.
+            .body-1 Den Eingriff führen wir in renommierten Kliniken in Zürich durch, dazu gehören die Limmatklinik, die Klinik Bethanien und die Klinik am See.
+
+        //begin img
+        .treatments-section__img
+          picture
+            source(media="(min-width: 1024px)", srcset="assets/img/treatment-01@2x.jpg")
+            source(srcset="assets/img/treatment-01.jpg")
+            img(src="assets/img/treatment-01.jpg", alt="Image")
+        //end img
+
+        //begin blockquote
+        .treatments-section__blockquote
+          .treatments-section__blockquote-icon
+            +svg('quotes')
+          .treatments-section__blockquote-text.quotes-2 Lorem ipsum dolor sit amet consectetur. Donec a aliquet donec lobortis lectus mi amet. Egestas mauris scelerisque viverra mattis scelerisque blandit convallis. Aliquam urna dui sagittis iaculis nisi ut. Interdum pharetra nisl rhoncus fringilla lacus nunc nulla sed morbi. Vulputate donec pellentesque condimentum et ultricies.
+          .treatments-section__blockquote-doc
+            .treatments-section__blockquote-doc-ava
+              img(src="assets/img/doc-ava.jpg" alt="img")
+            .treatments-section__blockquote-doc-info
+              .treatments-section__blockquote-doc-position.body-2 PD Dr. med. Dr. med. dent.
+              .treatments-section__blockquote-doc-name.h4 Johann Malina
+        //end blockquote
+      //end treatments-section-03
+
+      //begin treatments-section-04
+      .treatments-section#section-04
+        .treatments-section__questions
+          .treatments-section__questions-title.overline Häufige Fragen unserer PatientInnen
+          .treatments-section__questions-text.quotes-2
+            span Warum ist die CPAP-Maske keine gute Lösung?
+            span Warum schnarche ich?
+            span Wann ist Schnarchen gefährlich?
+            span Ist die Schnarch-OP sehr schmerzhaft?
+            span Übernimmt die Krankenkasse die Behandlungskosten?
+            span Was erwartet mich als Patient bei einer Unterkiefer-Osteotomie?
+            span Wie erfolgreich ist Schlafapnoe-Operation?
+            span Wo findet der Eingriff statt?
+      //end treatments-section-04
+
+      //begin treatments-section-05
+      .treatments-section#section-05
+        .treatments-section-tags-wrapper
+          .treatments-section-tags-title.overline Die Erklärungen zu wichtigen Fachbegriffen finden Sie in unserem Glossar:
+          .treatments-section-tags
+            a(href="/").treatments-section-tag.menu Warum ist die CPAP-Maske keine gute Lösung?
+            a(href="/").treatments-section-tag.menu Warum schnarche ich?
+            a(href="/").treatments-section-tag.menu Wann ist Schnarchen gefährlich?
+            a(href="/").treatments-section-tag.menu Ist die Schnarch-OP sehr schmerzhaft?
+            a(href="/").treatments-section-tag.menu Übernimmt die Krankenkasse die Behandlungskosten?
+            a(href="/").treatments-section-tag.menu Unterkiefer-Osteotomie?
+            a(href="/").treatments-section-tag.menu Was erwartet mich als Patient bei einer?
+            a(href="/").treatments-section-tag.menu Wie erfolgreich ist Schlafapnoe-Operation?
+            a(href="/").treatments-section-tag.menu Wo findet der Eingriff statt?
+      //end treatments-section-05
+    //end treatments__right
+//end treatments-content

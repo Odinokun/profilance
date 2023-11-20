@@ -1,0 +1,151 @@
+.treatments-content {
+  .container {
+    display: flex;
+    padding: 100px 0 0 0;
+
+    @include min(1024) {
+      background-image: url('../img/decor.svg');
+      background-repeat: no-repeat;
+      background-position: 0 200px;
+      padding: 136px 64px 0 64px;
+    }
+    @include min(1440) {
+      padding: 136px 80px 0 80px;
+    }
+  }
+}
+
+/* begin LEFT */
+.treatments__left {
+  display: none;
+
+  @include min(1024) {
+    display: block;
+    flex: none;
+    width: 400px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+  }
+}
+
+.treatments-left {
+  position: sticky;
+  top: 30px;
+}
+
+.treatments-left__menu {
+  margin-bottom: 8px;
+  padding: 24px;
+  border: 1px solid $secondary-buff;
+  border-radius: 16px;
+  background-color: $primary-white;
+}
+
+.treatments-left__menu-title {
+  margin-bottom: 16px;
+  color: $primary-gold;
+}
+
+.treatments-left__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.treatments-left__nav-item {
+  padding: 24px 0;
+  border-bottom: 1px solid $secondary-desert-sand;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.treatments-left__nav-link {
+  display: block;
+  color: $primary-green;
+}
+
+.treatments-left__share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $secondary-buff;
+  border-radius: 16px;
+  background-color: $primary-white;
+
+  &:hover {
+    svg {
+      fill: $primary-green;
+    }
+  }
+
+  svg {
+    fill: $primary-gold;
+    width: 24px;
+    height: 24px;
+    transition: fill .3s ease-in-out;
+  }
+}
+
+/* end   LEFT */
+
+/* begin RIGHT */
+.treatments__right {
+  width: 100%;
+  @include min(768) {
+  padding-bottom: 30px;
+
+  }
+
+  @include min(1024) {
+    width: calc(100% - 400px);
+  }
+}
+
+.treatments-section__text-block {
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @include min(768) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  @include min(1024) {
+    padding-right: 70px;
+    padding-left: 40px;
+  }
+
+  .h2 {
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .body-1 {
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.treatments-section,
+.treatments-section__item {
+  margin-bottom: 40px;
+
+  @include min(1024) {
+    margin-bottom: 56px;
+  }
+}
+
+/* end   RIGHT */

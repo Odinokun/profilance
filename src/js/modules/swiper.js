@@ -35,6 +35,30 @@ module.exports = function () {
     },
   });
 
+  const TreatmentsSlider = new Swiper("#treatments-slider", {
+    slidesPerView: 1.2,
+    spaceBetween: 8,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 1.4,
+      },
+      1200: {
+        slidesPerView: 1.7,
+      },
+    },
+    navigation: {
+      nextEl: '.treatments-slider__next',
+    },
+    pagination: {
+      el: ".treatments-slider__pagination",
+      clickable: true,
+    },
+  });
+
   // const clinicThumb = new Swiper("#clinic-slider-sm", {
   //   slidesPerView: 1,
   //   spaceBetween: 20,

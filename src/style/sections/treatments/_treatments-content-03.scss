@@ -1,0 +1,98 @@
+/* begin section 3 */
+.treatments-section__img {
+  overflow: hidden;
+  width: calc(100% - 16px);
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  border-radius: 16px;
+
+  @include min(768) {
+    width: calc(100% - 32px);
+  }
+  @include min(1024) {
+    width: 100%;
+    margin-bottom: 56px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    @include min(768) {
+      height: 400px;
+    }
+    @include min(1024) {
+      height: 500px;
+    }
+  }
+}
+
+.treatments-section__blockquote {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 40px 16px;
+  background-color: $primary-green;
+
+  @include min(768) {
+    padding: 40px 32px;
+  }
+  @include min(1024) {
+    margin-bottom: 56px;
+    padding: 40px;
+    border-radius: 16px;
+  }
+}
+
+.treatments-section__blockquote-icon {
+  position: absolute;
+  top: -22px;
+  left: 40px;
+  width: 38px;
+  height: 32px;
+
+  svg {
+    fill: $primary-gold;
+    width: 38px;
+    height: 32px;
+  }
+}
+
+.treatments-section__blockquote-text {
+  margin-bottom: 24px;
+  color: $secondary-buff;
+
+  @include min(1024) {
+    margin-bottom: 40px;
+  }
+}
+
+.treatments-section__blockquote-doc {
+  display: flex;
+  align-items: center;
+}
+
+.treatments-section__blockquote-doc-ava {
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  margin-right: 24px;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.treatments-section__blockquote-doc-position,
+.treatments-section__blockquote-doc-name {
+  color: $primary-white;
+}
+
+/* end   section 3 */
