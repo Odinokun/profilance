@@ -1,0 +1,55 @@
+extends ../_template
+
+block variables
+  - let title       = 'Profilance'
+  - let description = ''
+
+mixin item(img, title)
+  a(href="/").blog__item
+    .blog__item-img
+      img(src="assets/img/blog/blog-" + img + ".jpg", alt=title)
+    .blog__item-content
+      .h4.blog__item-title= title
+      .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+      .blog__item-btn
+        +svg('arr-45')
+    .blog__item-hidden
+      .h4.blog__item-title= title
+      .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+      .blog__item-btn
+        +svg('arr-45')
+
+block content
+  .main-wrap.no-js
+    //include ../sections/header
+
+    //begin content
+    main.main
+      .blog
+        .container
+          //begin header
+          .blog__header
+            h1.h1.blog__title FAQ and Articles
+          //end header
+          //begin body
+          .blog__body
+            .blog__list
+              a(href="/").blog__item.blog__item--first
+                .blog__item-content
+                  .h4.blog__item-new New
+                  .h4.blog__item-title Wann ist Schnarchen gefährlich?
+                  .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+                  .blog__item-btn
+                    +svg('arr-45')
+              +item('01', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+              +item('02', 'Optimaler Biss - optimales Profil? Was haben')
+              +item('03', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
+              +item('04', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
+              +item('05', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+              +item('06', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
+              +item('07', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          //end body
+
+    //end content
+    include ../sections/footer
+    include ../sections/scripts
