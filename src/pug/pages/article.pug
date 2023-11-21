@@ -1,0 +1,26 @@
+extends ../_template
+
+block variables
+  - let title       = 'Profilance'
+  - let description = ''
+block content
+  .main-wrap.no-js
+    //include ../sections/header
+
+    //begin content
+    main.main
+      .article
+        .container
+          //begin article__header
+          .article__header
+            a(href="/").article__header-back
+              +svg('arr-left')
+              .overline.article__subtitle BACK TO Medical Glossary
+            h1.h1.article__title Schlafapnoe-Implantat (Zungenschrittmacher)
+          //end article__header
+
+          include ../sections/article/article-content
+          include ../sections/glossary/gloss-banner
+    //end content
+    include ../sections/footer
+    include ../sections/scripts
