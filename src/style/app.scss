@@ -33,5 +33,8 @@
 @import "sections/glossary/gloss-filter";
 @import "sections/glossary/gloss-content";
 
+@import "sections/article/article-content";
+
 //pages
 @import 'pages/glossary';
+@import 'pages/article';

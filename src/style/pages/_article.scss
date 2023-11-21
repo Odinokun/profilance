@@ -1,0 +1,57 @@
+.article {
+  padding-bottom: 40px;
+  background-color: $primary-green;
+  background-image: url('../img/decor-glossary.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+
+  @include min(1024) {
+    padding-bottom: 80px;
+  }
+}
+
+.article__header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.article__header-back {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &:hover {
+    svg {
+      fill: $primary-white;
+    }
+
+    .article__subtitle {
+      color: $primary-white;
+    }
+  }
+
+  svg {
+    flex: none;
+    fill: $primary-gold;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    transition: fill .3s ease;
+  }
+}
+
+.article__subtitle {
+  transition: color .3s ease;
+  color: $primary-gold;
+}
+
+.article__title {
+  overflow: hidden;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  color: $primary-white;
+
+  @include min(1024) {
+    max-width: 70%;
+  }
+}
