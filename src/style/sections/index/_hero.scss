@@ -3,7 +3,7 @@
   background-color: $primary-green;
 
   @include min(1024) {
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .container {
