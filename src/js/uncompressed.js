@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'glossary',
     'article',
     'blog',
+    'contacts',
     ]);
 });
 

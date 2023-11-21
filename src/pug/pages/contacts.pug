@@ -1,0 +1,103 @@
+extends ../_template
+
+block variables
+  - let title       = 'Profilance'
+  - let description = ''
+
+block content
+  .main-wrap.no-js
+    //include ../sections/header
+
+    //begin content
+    main.main
+      .contacts
+        .container
+          //begin left
+          .contacts__left
+            .contacts__item
+              .overline.contacts__subtitle Have a question?
+              h1.h1.contacts__title Contact Us
+              .body-1 We are looking forward to connecting with you. Whether you want to pay us a visit, give us a call, schedule an appointment, or drop us an email, we welcome your contact.
+              button.btn Book Appointment
+          //end left
+          //begin right
+          .contacts__right
+            //begin item
+            .contacts__item
+              h4.h4.contacts__title Clinic Profilance
+              .contacts__links
+                a(href="/" target="_blank" rel="nofollow noopener noreferrer").contacts__link Ärztehaus Fluntern<br>Zürichbergstrasse<br>70 8044 Zürich
+                a(href="mailto:clinic@profilance.ch").contacts__link clinic@profilance.ch
+                a(href="tel:+41447975005").contacts__link +41 44 797 50 05
+              h4.h4.contacts__title Öffnungszeiten
+              .body-1 Montag bis Freitag:<br>von 08:00 bis 18:00<br>Samstag: auf Anfrage
+            //end item
+            //begin item
+            .contacts__item
+              h4.h4.contacts__title Anfahrt Und Lage
+              .body-1 Unsere Facharztpraxis befindet sich an zentraler Lage in Zürich direkt im Ärztehaus Fluntern an der Zürichbergstrasse 70.
+              .body-1 Sie erreichen uns vom Hauptbahnhof Zürich aus in nur wenigen Minuten mit der Tramlinie 6. Die Haltestelle Kirche Fluntern befindet sich direkt vor dem Gebäude. Bei der Anreise mit dem Auto kann das Parkhaus Vorderberg (vis à vis) oder die Kurzparkzone (nahe Umgebung) benutzt werden.
+            //end item
+
+          //end right
+
+
+      .contacts__map#map
+    //end content
+    include ../sections/footer
+    include ../sections/scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE_7BZuKg3TaYOi1Gjr1K1f0KlytfVJVo&callback=initMap" async defer)
+    //script(src="https://maps.googleapis.com/maps/api/js?key=" + "API_KEY" + "&callback=initMap" async defer)
+    script.
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {
+            lat: 47.37631481191956,
+            lng: 8.560088237121237
+          },
+          zoom: 13,
+          maxZoom: 19,
+          minZoom: 10,
+          styles: [{
+            "featureType": "all",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#004348" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#dcb187" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f3e6d9" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f3e6d9" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#c08c5f" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "water",
+            "elementType": "",
+            "stylers": [{ "color": "#004348" }, { "visibility": "on" }, { "saturation": 0 }]
+          }, {
+            "featureType": "all",
+            "elementType": "labels.icon",
+            "stylers": [{ "visibility": "off" }]
+          }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }] }]
+        });
+
+        let marker = new google.maps.Marker({
+          // Определяем позицию маркера
+          position: {
+            lat: 47.37631481191956,
+            lng: 8.560088237121237
+          },
+          map: map,
+          title: 'Profilance',
+          icon: 'assets/img/marker.png',
+        });
+      }
