@@ -29,14 +29,15 @@
 @import 'sections/treatments/treatments-content-04';
 @import 'sections/treatments/treatments-content-05';
 
-@import "sections/glossary/gloss-banner";
-@import "sections/glossary/gloss-filter";
-@import "sections/glossary/gloss-content";
+@import 'sections/glossary/gloss-banner';
+@import 'sections/glossary/gloss-filter';
+@import 'sections/glossary/gloss-content';
 
-@import "sections/article/article-content";
+@import 'sections/article/article-content';
 
 //pages
 @import 'pages/glossary';
 @import 'pages/article';
 @import 'pages/blog';
 @import 'pages/contacts';
+@import 'pages/post';

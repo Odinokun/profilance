@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'article',
     'blog',
     'contacts',
+    'post',
     ]);
 });
 
