@@ -18,6 +18,14 @@
     }
   }
 
+  .article__title {
+    color: $primary-gold;
+  }
+
+  svg {
+    fill: $primary-gold;
+  }
+
   .gloss-banner {
     background-color: $primary-white;
     background-image: url('../img/decor.svg');

@@ -1,0 +1,73 @@
+mixin menuList()
+  ul.menu-mobile-nav__list
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Treatments
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Aesthetic surgery
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Teeth
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Facial Feminisation
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Jaw joints
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Infections
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Snoring & Sleep Apnoea
+    li.menu-mobile-nav__item
+      a(href="/").menu-mobile-nav__link.menu Jaw joints
+//begin menu-mobile
+.menu-mobile#menu-mobile
+  .container
+    //begin nav
+    .menu-mobile__nav.menu-mobile-nav
+      .menu-mobile-nav__item
+        .h4.menu-mobile-nav__main-link
+          |Treatments
+          .menu-mobile-nav__btn
+            +svg('list')
+        +menuList()
+      .menu-mobile-nav__item
+        .h4.menu-mobile-nav__main-link
+          |About
+          .menu-mobile-nav__btn
+            +svg('list')
+        +menuList()
+      .menu-mobile-nav__item
+        a(href="/").h4.menu-mobile-nav__main-link FAQ
+      .menu-mobile-nav__item
+        a(href="/").h4.menu-mobile-nav__main-link Contact
+    //end nav
+
+    button.btn.menu-mobile__btn Book appointment
+    
+    //begin header__lang
+    .header__lang.header-lang
+      .header-lang__icon
+        +svg('lang')
+      select.header-lang__select
+        option En
+        option De
+    //end header__lang
+
+    //begin social
+    .menu-mobile__socials
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").menu-mobile__social-link
+        +svg('fb')
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").menu-mobile__social-link
+        +svg('ln')
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").menu-mobile__social-link
+        +svg('soc')
+    //end social
+
+    //begin info
+    .menu-mobile__info
+
+      a(href="tel:+41447975005").body-1.footer-middle__link +41 44 797 50 05
+      a(href="mailto:clinic@profilance.ch").body-1.footer-middle__link clinic@profilance.ch
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").body-1.footer-middle__link Ärztehaus Fluntern<br>Zürichbergstrasse<br>70 8044 Zürich
+      .body-1.footer-middle__schedule Montag bis Freitag:<br>von 08:00 bis 18:00<br>Samstag: auf Anfrage
+    //end info
+
+
+//end menu-mobile

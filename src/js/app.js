@@ -4,8 +4,6 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/selects')();
   require('./modules/scroll2anchor')();
-
-  // require('./modules/maskedinput')();
-  // require('./modules/popup')();
+  require('./modules/mobile-menu')();
 
 });

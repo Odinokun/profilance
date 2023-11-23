@@ -1,8 +1,8 @@
 module.exports = function () {
 
-  $( "#lang" )
+  $(".header-lang__select")
     .selectmenu()
-    .selectmenu( "menuWidget" )
-    .addClass( "overflow" );
+    .selectmenu("menuWidget")
+    .addClass("overflow");
 
 };
