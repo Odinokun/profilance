@@ -1,8 +1,46 @@
+mixin menuList()
+  ul.header-nav__list
+    li.header-nav__item
+      a(href="/").header-nav__link Treatments
+    li.header-nav__item
+      a(href="/").header-nav__link Aesthetic surgery
+    li.header-nav__item
+      a(href="/").header-nav__link Teeth
+    li.header-nav__item
+      a(href="/").header-nav__link Facial Feminisation
+    li.header-nav__item
+      a(href="/").header-nav__link Jaw joints
+    li.header-nav__item
+      a(href="/").header-nav__link Infections
+    li.header-nav__item
+      a(href="/").header-nav__link Snoring & Sleep Apnoea
+    li.header-nav__item
+      a(href="/").header-nav__link Jaw joints
+
 //begin header
-.header
+.header#header
   .container
+    //begin burger
+    label.header__burger
+      input(type="checkbox" name="burger" id="burger")
+      .header__burger-icon
+      .header__burger-text.menu Menu
+    //end burger
+
     //begin left
     .header__left
+      .header__nav.header-nav
+        .header-nav__main Treatments
+        +menuList()
+        .header-nav__btn
+          +svg('list')
+      .header__nav.header-nav
+        .header-nav__main About
+        +menuList()
+        .header-nav__btn
+          +svg('list')
+      .header__nav.header-nav
+        a(href="/").header-nav__main.header-nav__main--single FAQ
     //end left
 
     //begin middle
@@ -13,15 +51,18 @@
 
     //begin right
     .header__right
+      .header__nav.header-nav
+        a(href="/").header-nav__main.header-nav__main--single Contact
       //begin header__lang
       .header__lang.header-lang
         .header-lang__icon
           +svg('lang')
-        select#lang.header-lang__select
-          option Eng
-          option Ukr
-          option Deu
+        select.header-lang__select
+          option En
+          option De
       //end header__lang
       button.btn Book Now
     //end right
 //end header
+
+include ../elements/menu-mobile
