@@ -134,3 +134,56 @@
 }
 
 /* end   BANNER */
+
+.post-banner {
+  background: $secondary-almond;
+  padding-bottom: 40px;@include min(1024) {
+  padding-bottom: 80px;
+  }
+  .boss-banner{
+    background-color: #fff;
+  }
+}
+
+.glossary,
+.article,
+.post-banner {
+    //.boss-banner {
+    //  outline: 1px solid greenyellow;
+    //  border: 1px solid greenyellow;
+    //}
+    .boss-banner__content {
+    min-height: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .boss-banner__image {
+    top: 80px;
+    left: auto;
+    height: 100%;
+
+    @include min(640) {
+      top: 0;
+    }
+    @include min(768) {
+      right: -200px;
+    }
+    @include min(1200) {
+      right: -100px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: contain;
+      object-position: 100% 0;
+
+      @include min(768) {
+        min-height: 660px;
+        object-position: 100% -70px;
+      }
+    }
+  }
+}

@@ -8,6 +8,12 @@
   @include min(1024) {
     padding-bottom: 80px;
   }
+
+  .boss-banner {
+    border-radius: 16px;
+  }
+
+
 }
 
 .glossary__header {
