@@ -1,36 +1,37 @@
 /* begin section 4 */
 .treatments-section__questions {
   margin-bottom: 40px;
-  background-color: $secondary-almond;
   padding: 40px 16px;
+  background-color: $secondary-almond;
+
   @include min(768) {
     padding: 40px 32px;
   }
-
   @include min(1024) {
-  border-radius: 16px;
-    padding: 40px;
     margin-bottom: 56px;
+    padding: 40px;
+    border-radius: 16px;
   }
 }
 
 .treatments-section__questions-title {
   margin-bottom: 24px;
   color: $primary-gold;
-  @include min(1024) {
-  margin-bottom: 32px;
 
+  @include min(1024) {
+    margin-bottom: 32px;
   }
 }
 
 .treatments-section__questions-text {
   span {
-    padding-right: 8px;
 
-    &:nth-child(even) {
+    padding-right: 8px;
+  }
+    a {
+    padding-right: 8px;
       color: $primary-gold;
     }
-  }
 }
 
 /* end   section 4 */

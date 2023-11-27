@@ -1,15 +1,26 @@
 .header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: $primary-green;
+
+  &.fixed {
+    position: fixed;
+  }
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80px;
     padding-top: 20px;
     padding-bottom: 20px;
 
     @include min(768) {
       justify-content: space-between;
+      min-height: 110px;
     }
   }
 }
@@ -118,9 +129,6 @@
   width: 12px;
   height: 12px;
   margin: auto;
-  background-image: url('../img/list.svg');
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
 
   svg {
     fill: $primary-white;
@@ -154,7 +162,7 @@
 
 .header-nav__item {
   position: relative;
-  padding: 12px 0 12px 11px;
+  padding: 0 0 0 11px;
 
   &::before {
     position: absolute;
@@ -178,6 +186,10 @@
   }
 }
 
+.header-nav__link {
+  display: block;
+  padding: 12px 0;
+}
 
 /* end   LEFT */
 
@@ -190,7 +202,7 @@
     width: 100%;
     max-width: 160px;
 
-    @include min(768) {
+    @include min(1024) {
       max-width: 233px;
     }
   }

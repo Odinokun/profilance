@@ -7,7 +7,7 @@ module.exports = function () {
   });
 
   $('.header__burger input').on('click', function () {
-    $('.main').toggleClass('overflow');
+    $('#header').toggleClass('fixed');
     $('#menu-mobile').slideToggle();
   });
 

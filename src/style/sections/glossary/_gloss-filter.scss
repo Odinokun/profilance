@@ -19,6 +19,12 @@
 .glossary-filter__letter {
   position: relative;
 
+  &:hover {
+    span {
+      background-color: rgba(0, 0, 0, .15);
+    }
+  }
+
   input {
     position: absolute;
     z-index: 1;
@@ -36,11 +42,12 @@
     margin-right: 4px;
     margin-bottom: 4px;
     padding: 16px;
+    transition: all .3s ease-in-out;
     color: $primary-gold;
     border-radius: 8px;
   }
 }
 
 .glossary-filter__letter input:checked + span {
-  background: linear-gradient(0deg, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, .25) 100%), #004348;
+  background-color: rgba(0, 0, 0, .25);
 }

@@ -53,7 +53,6 @@
 }
 
 .treatments-left__nav-item {
-  padding: 24px 0;
   border-bottom: 1px solid $secondary-desert-sand;
 
   &:last-child {
@@ -63,6 +62,7 @@
 
 .treatments-left__nav-link {
   display: block;
+  padding: 24px 0;
   color: $primary-green;
 }
 

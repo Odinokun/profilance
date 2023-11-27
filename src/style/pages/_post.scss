@@ -4,7 +4,6 @@
   background: $secondary-almond;
 
   @include min(1024) {
-    padding-top: 150px;
     padding-bottom: 80px;
   }
 
@@ -65,3 +64,7 @@
 
   @include responsive-font(32, 24);
 }
+
+//.post-banner {
+//  background: $secondary-almond;
+//}
