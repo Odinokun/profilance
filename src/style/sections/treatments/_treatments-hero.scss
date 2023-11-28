@@ -2,7 +2,6 @@
   background-color: $primary-green;
 
   .container {
-    max-width: 1600px;
     transform: translateY(35px);
 
     @include min(1024) {
