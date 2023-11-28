@@ -96,3 +96,71 @@
   font-style: normal;
   line-height: 1;
 }
+
+.post,
+.article__right {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $barlow;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+  }
+
+  h1 {
+    @include responsive-font(64, 48);
+  }
+
+  h2 {
+    @include responsive-font(48, 40);
+  }
+
+  h3 {
+    @include responsive-font(36, 32);
+  }
+
+  h4 {
+    font-weight: 400;
+
+    @include responsive-font(32, 24);
+  }
+
+  p {
+    font-family: $mont;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.7;
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.article__right {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $primary-gold;
+  }
+
+  p {
+    color: $primary-white;
+  }
+
+  li {
+    &::before {
+      background-color: $primary-gold;
+    }
+  }
+}

@@ -197,6 +197,7 @@
   border-radius: 50%;
 
   @include min(768) {
+    margin-right: 0;
     margin-left: 32px;
   }
 

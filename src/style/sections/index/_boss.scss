@@ -136,11 +136,13 @@
 /* end   BANNER */
 
 .post-banner {
+  padding-bottom: 40px;
   background: $secondary-almond;
-  padding-bottom: 40px;@include min(1024) {
-  padding-bottom: 80px;
+  @include min(1024) {
+    padding-bottom: 80px;
   }
-  .boss-banner{
+
+  .boss-banner {
     background-color: #fff;
   }
 }
@@ -148,11 +150,7 @@
 .glossary,
 .article,
 .post-banner {
-    //.boss-banner {
-    //  outline: 1px solid greenyellow;
-    //  border: 1px solid greenyellow;
-    //}
-    .boss-banner__content {
+  .boss-banner__content {
     min-height: 0;
     padding-top: 30px;
     padding-bottom: 30px;

@@ -1,0 +1,32 @@
+//begin share
+.share-layout#share-layout
+.share#share
+  .share__header
+    h4.h4.share-header__title Share
+    .share-header__close#share-header__close
+      +svg('close')
+  //begin links
+  .share__links
+    .share__link-item
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").share__link-icon
+        +svg('fb')
+      .share__link-text.body-2 Facebook
+    .share__link-item
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").share__link-icon
+        +svg('ln')
+      .share__link-text.body-2 LinkedIn
+    //-.share__link-item
+      a(href="/" target="_blank" rel="nofollow noopener noreferrer").share__link-icon
+        +svg('soc')
+      .share__link-text.body-2 Instagram
+  //end links
+  //begin copy
+  .share__copy
+    .share__copy-title.body-2 Page Link
+    .share__copy-input
+      span.share__copy-input-text https://www.profilance.ch/blog/wann ist Schnarchen gefährlich?
+      .share__copy-input-icon
+        img(src="assets/img/copy.svg" alt="icon")
+  //end copy
+
+//end share

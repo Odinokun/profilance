@@ -4,19 +4,32 @@ block variables
   - let title       = 'Profilance'
   - let description = ''
 
-mixin item(img, title)
-  a(href="/").blog__item
-    .blog__item-img
-      img(src="assets/img/blog/blog-" + img + ".jpg", alt=title)
-    .blog__item-content
-      .h4.blog__item-title= title
-      .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
-      .blog__item-btn
+mixin itemNew(title)
+  a(href="/").blog__item.blog-item.blog-item--new
+    .blog-item__label New
+    .blog-item__content
+      .h4.blog-item__title= title
+      .body-1.blog-item__text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+      .blog-item__btn
         +svg('arr-45')
-    .blog__item-hidden
-      .h4.blog__item-title= title
-      .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
-      .blog__item-btn
+
+mixin item(title)
+  a(href="/").blog__item.blog-item
+    .blog-item__content
+      .h4.blog-item__title= title
+      .body-1.blog-item__text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+      .blog-item__btn
+        +svg('arr-45')
+
+mixin itemImage(img, title)
+  a(href="/").blog__item.blog-item.blog-item--image
+    .blog-item__label New
+    .blog-item__img
+      img(src="assets/img/blog/blog-" + img + ".jpg", alt=title)
+    .blog-item__content
+      .h4.blog-item__title= title
+      .body-1.blog-item__text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
+      .blog-item__btn
         +svg('arr-45')
 
 block content
@@ -34,20 +47,14 @@ block content
           //begin body
           .blog__body
             .blog__list
-              a(href="/").blog__item.blog__item--first
-                .blog__item-content
-                  .h4.blog__item-new New
-                  .h4.blog__item-title Wann ist Schnarchen gefährlich?
-                  .body-1.blog__item-text Atemaussetzer als entscheidender Hinweis auf Schlafapnoe
-                  .blog__item-btn
-                    +svg('arr-45')
-              +item('01', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
-              +item('02', 'Optimaler Biss - optimales Profil? Was haben')
-              +item('03', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
-              +item('04', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
-              +item('05', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
-              +item('06', 'Kiefergelenksbeschwerden mit Migräne zu tun?')
-              +item('07', 'Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+              +itemNew('Wann ist Schnarchen gefährlich?')
+              +item('Wann ist Schnarchen gefährlich?')
+              +itemImage('01', 'Wann ist Schnarchen gefährlich?')
+              +item('Wann ist Schnarchen gefährlich?')
+              +itemImage('02', 'Wann ist Schnarchen gefährlich?')
+              +item('Wann ist Schnarchen gefährlich?')
+              +itemImage('03', 'Wann ist Schnarchen gefährlich?')
+              +item('Wann ist Schnarchen gefährlich?')
           //end body
 
     //end content

@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     width: calc(100% + 8px);
-    margin-left: -4px;
+    transform: translateX(-4px);
   }
 }
 

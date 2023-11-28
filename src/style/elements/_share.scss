@@ -1,0 +1,138 @@
+.share-layout {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  opacity: .95;
+  background-color: $primary-green;
+}
+
+.share {
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  display: none;
+  max-width: 95%;
+  padding: 16px 24px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  background-color: $primary-white;
+
+  @include min(768) {
+    max-width: 370px;
+  }
+}
+
+.share-header__title {
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: $primary-gold;
+}
+
+.share-header__close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(210, 217, 215, .25);
+
+  &:hover {
+    background-color: #f3e6d9;
+
+    svg {
+      fill: $primary-gold;
+    }
+  }
+
+  svg {
+    fill: $secondary-body-text-1;
+    width: 11px;
+    height: 11px;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.share__links {
+  display: flex;
+  //justify-content: space-between;
+}
+
+.share__link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 32px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.share__link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  transition: all .3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(210, 217, 215, .25);
+
+  &:hover {
+    background-color: #f3e6d9;
+
+    svg {
+      fill: $primary-gold;
+    }
+  }
+
+  svg {
+    fill: $primary-green;
+    width: 24px;
+    height: 24px;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.share__copy-title {
+  margin-bottom: 8px;
+}
+
+.share__copy-input {
+  position: relative;
+  display: flex;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgba(210, 217, 215, .25);
+}
+
+.share__copy-input-text {
+  overflow: hidden;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.share__copy-input-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
