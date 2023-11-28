@@ -23,15 +23,21 @@
   }
 }
 
-.treatments-section__questions-text {
-  span {
 
-    padding-right: 8px;
-  }
-    a {
-    padding-right: 8px;
+.treatments-section__questions-text {
+  a {
+    margin-right: 8px;
+    transition: all .3s ease-in-out;
+    color: $primary-green;
+
+    &:hover {
+      background-color: rgba(192, 140, 95, .4);
+    }
+
+    &:nth-child(even) {
       color: $primary-gold;
     }
+  }
 }
 
 /* end   section 4 */

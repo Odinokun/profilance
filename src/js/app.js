@@ -5,5 +5,7 @@ $(function() {
   require('./modules/selects')();
   require('./modules/scroll2anchor')();
   require('./modules/mobile-menu')();
+  require('./modules/copy')();
+  require('./modules/shared')();
 
 });
