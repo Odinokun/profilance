@@ -54,6 +54,7 @@
 
 .treatments-left__nav-item {
   margin-bottom: 0 !important;
+  padding-left: 0 !important;
   border-bottom: 1px solid $secondary-desert-sand;
 
   &:last-child {
@@ -159,10 +160,10 @@
 .treatments-section__quote-text {
   font-family: $mont;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   line-height: 1.7;
-  color: $secondary-body-text-1;
+  color: $primary-green;
 }
 
 /* end   RIGHT */
