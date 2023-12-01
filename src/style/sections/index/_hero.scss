@@ -1,9 +1,9 @@
 .hero {
-  padding-top: 32px;
   background-color: $primary-green;
 
   @include min(1024) {
     min-height: 500px;
+    padding-top: 32px;
   }
 
   .container {
@@ -18,26 +18,21 @@
 }
 
 /* begin CONTENT */
-.hero-content {
-  z-index: 1;
+.hero-slider__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  height: 100%;
+  padding: 0 0 40px 0;
 
   @include min(1024) {
     position: absolute;
     top: 0;
-    bottom: 0;
-    left: 64px;
-    width: calc(100% / 12 * 5);
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  @include min(1440) {
-    left: 80px;
+    left: 0;
+    width: calc(100vw / 12 * 5);
+    padding: 20px 0;
   }
 }
 
@@ -65,8 +60,8 @@
 .hero-slider-round {
   position: absolute;
   z-index: 2;
-  top: -36px;
   right: 16px;
+  bottom: 300px;
   overflow: hidden;
   width: 72px;
   height: 72px;
@@ -74,14 +69,14 @@
   border-radius: 50%;
 
   @include min(768) {
-    top: -50px;
     right: 32px;
+    bottom: 400px;
     width: 100px;
     height: 100px;
   }
   @include min(1024) {
-    top: -50px;
-    left: -50px;
+    top: 0;
+    left: calc(25% - 75px);
   }
 
   img {
@@ -108,39 +103,30 @@
 .hero-slider-wrap {
   position: relative;
   width: calc(100% + 16px);
-  margin-top: -104px;
   margin-right: -16px;
-  transform: translateY(104px);
+  margin-bottom: -64px;
 
   @include min(768) {
     width: calc(100% + 32px);
     margin-right: -32px;
   }
   @include min(1024) {
-    width: calc(75% + 64px);
-    margin-top: 0;
+    width: calc(100% + 64px);
     margin-right: -64px;
-    transform: translateY(54px);
+    margin-bottom: 0;
   }
   @include min(1440) {
-    width: calc(75% + 80px);
+    width: calc(100% + 80px);
     margin-right: -80px;
   }
 }
 
 .hero-slider {
   position: relative;
-  overflow: hidden;
-  height: 300px;
-  padding-bottom: 50px;
 
-  @include min(768) {
-    height: 400px;
-  }
   @include min(1024) {
     height: 500px;
     padding-right: 64px;
-    padding-bottom: 0;
   }
   @include min(1440) {
     padding-right: 80px;
@@ -169,7 +155,7 @@
       align-items: center;
       width: 25px;
       height: 100%;
-      transform: translate(0, -54px);
+      transform: translate(0, 50px);
     }
   }
 
@@ -218,16 +204,42 @@
 }
 
 .hero-slider__slide {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column-reverse;
+  width: 100%;
+  border-radius: 0 0 16px 16px;
+  background-color: $primary-green;
+
+  @include min(1024) {
+    display: block;
+    overflow: visible;
+    padding-left: 25%;
+  }
+}
+
+.hero-slider__img {
   overflow: hidden;
   width: 100%;
   border-radius: 16px;
 
+  @include min(1024) {
+    transform: translateY(50px);
+  }
+
   img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     object-position: center;
+
+    @include min(768) {
+      height: 400px;
+    }
+    @include min(1024) {
+      height: 500px;
+    }
   }
 }
 
