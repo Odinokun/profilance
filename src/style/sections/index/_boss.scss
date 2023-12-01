@@ -27,12 +27,14 @@
   @include min(1440) {
     padding: 56px 80px;
   }
+
 }
 
 .boss-slogan__text {
   margin-bottom: 0;
   color: $secondary-buff;
 }
+
 
 /* end   SLOGAN */
 
@@ -138,6 +140,7 @@
 .post-banner {
   padding-bottom: 40px;
   background: $secondary-almond;
+
   @include min(1024) {
     padding-bottom: 80px;
   }

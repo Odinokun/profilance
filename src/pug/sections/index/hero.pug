@@ -1,39 +1,40 @@
-//begin hero
-.hero
-  .container
-    //begin content
-    .hero__content.hero-content
+mixin slide()
+  .swiper-slide.hero-slider__slide
+    .hero-slider__img
+      picture
+        source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-01@2x.jpg")
+        source(srcset="assets/img/top-slider/top-slider-01.jpg")
+        img(src="assets/img/top-slider/top-slider-01.jpg", alt="Image")
+    .hero-slider__content
       .hero-content__subtitle.overline Teeth
       .hero-content__title.h1 Finally, I can show my teeth with joy again.
       a(href="/").btn.btn--outline Learn More
-    //end content
 
+mixin slide2()
+  .swiper-slide.hero-slider__slide
+    .hero-slider__img
+      picture
+        source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-02@2x.jpg")
+        source(srcset="assets/img/top-slider/top-slider-02.jpg")
+        img(src="assets/img/top-slider/top-slider-02.jpg", alt="Image")
+    .hero-slider__content
+      .hero-content__subtitle.overline Teeth
+      .hero-content__title.h1 Lorem ipsum dolor sit amet, consectetur elit.
+      a(href="/").btn.btn--outline Learn More
+
+//begin hero
+.hero
+  .container
     //begin slider
     .hero__slider.hero-slider-wrap
       .hero-slider-round
         img(src="assets/img/round-01.svg" alt="decorative round")
       .hero-slider#hero-slider
         .swiper-wrapper
-          .swiper-slide.hero-slider__slide
-            picture
-              source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-01@2x.jpg")
-              source(srcset="assets/img/top-slider/top-slider-01.jpg")
-              img(src="assets/img/top-slider/top-slider-01.jpg", alt="Image")
-          .swiper-slide.hero-slider__slide
-            picture
-              source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-02@2x.jpg")
-              source(srcset="assets/img/top-slider/top-slider-02.jpg")
-              img(src="assets/img/top-slider/top-slider-02.jpg", alt="Image")
-          .swiper-slide.hero-slider__slide
-            picture
-              source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-01@2x.jpg")
-              source(srcset="assets/img/top-slider/top-slider-01.jpg")
-              img(src="assets/img/top-slider/top-slider-01.jpg", alt="Image")
-          .swiper-slide.hero-slider__slide
-            picture
-              source(media="(min-width: 1024px)", srcset="assets/img/top-slider/top-slider-02@2x.jpg")
-              source(srcset="assets/img/top-slider/top-slider-02.jpg")
-              img(src="assets/img/top-slider/top-slider-02.jpg", alt="Image")
+          +slide()
+          +slide2()
+          +slide()
+          +slide2()
         .hero-slider__pagination
     //end slider
 //end hero

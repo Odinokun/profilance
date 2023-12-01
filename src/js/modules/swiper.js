@@ -23,7 +23,7 @@ module.exports = function () {
   });
 
   const heroSlider = new Swiper("#hero-slider", {
-    direction: "vertical",
+
     effect: "fade",
     autoplay: {
       delay: 4000,
@@ -32,6 +32,11 @@ module.exports = function () {
     pagination: {
       el: ".hero-slider__pagination",
       clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        direction: "vertical",
+      },
     },
   });
 
