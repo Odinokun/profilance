@@ -1,0 +1,101 @@
+extends ../_template
+
+mixin item(title, image)
+  //begin services-item
+  a(href="/").services-item
+    .services-item__image
+      img(src="assets/img/service-" + image + ".jpg" alt=title)
+    .h3.services-item__title-sm= title
+  //end services-item
+
+
+mixin team-list-item()
+  .team-list__item
+    .team-list__item-img
+      img(src="assets/img/doc.jpg" alt="Image")
+    .team-list__item-descr
+      .h4.team-list__item-title Johann Malina-Altzinger
+      .h4.team-list__item-position Dr. med. Dr. med. dent.
+      .body-1 Facharzt für Mund-, Kiefer und Gesichtschirurgie FMH
+
+mixin slide()
+  .team-slider__slide.swiper-slide
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/team-slide@2x.jpg")
+      source(srcset="assets/img/team-slide.jpg")
+      img(src="assets/img/team-slide.jpg", alt="Image")
+
+
+block variables
+  - let title       = 'Profilance'
+  - let description = ''
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main
+      //begin team-hero
+      .team-hero
+        .container
+          h1.h1.team-hero__title Our Team
+          .team-hero__image-wrapper
+            .team-hero__round
+              img(src="assets/img/round-02.svg" alt="decorative round")
+            .team-hero__image
+              picture
+                source(media="(min-width: 1024px)", srcset="assets/img/team-hero@2x.jpg")
+                source(srcset="assets/img/team-hero.jpg")
+                img(src="assets/img/team-hero.jpg", alt="Image")
+      //end team-hero
+
+      //begin team-text
+      .team-text
+        .container
+          .treatments-section__quote
+            .treatments-section__quote-text Während gelegentliches Schnarchen für die meisten Menschen harmlos ist, können wiederholte Atemaussetzer ein Zeichen für eine ernsthafte Erkrankung sein. Wenn Sie Bedenken hinsichtlich Ihres Schnarchens haben, suchen Sie medizinischen Rat. Ein rechtzeitiges Erkennen und Behandeln von obstruktiver Schlafapnoe (OSA) kann nicht nur Ihre Schlafqualität, sondern auch Ihre allgemeine Gesundheit erheblich verbessern.
+          p Viele Menschen schnarchen – <a href="/">manche leise und</a> kaum wahrnehmbar, andere so laut, dass es das ganze Haus aufweckt. Schnarchen ist oft ein Gegenstand von Scherzen, doch wann sollte man es ernst nehmen? Als Kieferchirurg möchte ich dieses Thema näher beleuchten und klären, wann Schnarchen gefährlich werden kann.
+      //end team-text
+
+      //begin team-list
+      .container
+        .team-list
+          +team-list-item()
+          +team-list-item()
+          +team-list-item()
+          +team-list-item()
+          +team-list-item()
+      //end team-list
+
+      //begin team-text
+      .team-text
+        .container
+          h2.h2 Schnarchen kann viele Ursachen haben
+          p.body-1 Das Schnarchen entsteht, wenn der Luftstrom durch den Mund und den Rachen beim Atmen während des Schlafs behindert wird. Dies führt dazu, dass das umliegende Gewebe in Schwingung gerät und das typische Schnarchgeräusch erzeugt. Es gibt Faktoren, die das Schnarchen begünstigen: Übergewicht, Alkoholkonsum vor dem Schlafengehen, Rückenlage beim Schlafen - oder organische Ursachen wie verengte Atemwege.
+          //begin img
+          .treatments-section__img
+            picture
+              source(media="(min-width: 1024px)", srcset="assets/img/treatment-01@2x.jpg")
+              source(srcset="assets/img/treatment-01.jpg")
+              img(src="assets/img/treatment-01.jpg", alt="Image")
+          //end img
+          h2.h2 Schnarchen kann viele Ursachen haben
+          p.body-1 Das Schnarchen entsteht, wenn der Luftstrom durch den Mund und den Rachen beim Atmen während des Schlafs behindert wird. Dies führt dazu, dass das umliegende Gewebe in Schwingung gerät und das typische Schnarchgeräusch erzeugt. Es gibt Faktoren, die das Schnarchen begünstigen: Übergewicht, Alkoholkonsum vor dem Schlafengehen, Rückenlage beim Schlafen - oder organische Ursachen wie verengte Atemwege.
+      //end team-text
+
+      //begin team-slider
+      .team-slider-wrap
+        .team-slider#team-slider
+          .swiper-wrapper
+            +slide()
+            +slide()
+            +slide()
+            +slide()
+            +slide()
+            +slide()
+          .team-slider__pagination
+      //end team-slider
+
+    //end content
+    include ../sections/footer
+    include ../sections/scripts
