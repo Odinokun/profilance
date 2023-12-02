@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'contacts',
     'post',
     '404',
+    'team',
     ]);
 });
 

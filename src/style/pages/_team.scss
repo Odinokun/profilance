@@ -1,0 +1,288 @@
+.team-hero {
+  .container {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85%;
+      content: '';
+      background-color: $secondary-almond;
+
+      @include min(768) {
+        height: 70%;
+      }
+    }
+  }
+}
+
+.team-hero__title {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @include min(1024) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.team-hero__image-wrapper {
+  position: relative;
+}
+
+.team-hero__image {
+  overflow: hidden;
+  border-radius: 16px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* begin ROUND */
+.team-hero__round {
+  position: absolute;
+  z-index: 2;
+  top: -36px;
+  right: 16px;
+  overflow: hidden;
+  width: 72px;
+  height: 72px;
+  animation: spin 30s linear infinite;
+  border-radius: 50%;
+
+  @include min(768) {
+    top: -50px;
+    width: 100px;
+    height: 100px;
+  }
+  @include min(1024) {
+    right: -50px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* end   ROUND */
+
+.team-text {
+  .container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 930px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+    color: $secondary-body-text-1;
+
+    @include min(1024) {
+      padding-top: 80px;
+      padding-bottom: 56px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $secondary-body-text-1;
+
+      &:hover {
+        color: $primary-gold;
+      }
+    }
+  }
+
+  .h2 {
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .treatments-section__quote {
+    margin-bottom: 24px;
+
+    @include min(1024) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .treatments-section__img {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 0;
+
+    @include min(1024) {
+      width: calc(100% + 80px);
+      margin-top: 56px;
+      margin-bottom: 56px;
+      margin-left: -40px;
+    }
+  }
+}
+
+/* begin LIST */
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: -16px;
+
+  @include min(640) {
+    margin-bottom: -32px;
+  }
+  @include min(1024) {
+    justify-content: center;
+    width: calc(100% + 80px);
+    margin-bottom: -40px;
+    margin-left: -40px;
+  }
+}
+
+.team-list__item {
+  flex: none;
+  width: 100%;
+  margin: 0 0 16px 0;
+
+  @include min(640) {
+    width: calc(50% - 16px);
+    margin: 0 0 32px 0;
+  }
+  @include min(1024) {
+    width: calc(33.33% - 40px);
+    margin: 0 20px 40px 20px;
+  }
+}
+
+.team-list__item-img {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 16px;
+
+  @include min(1024) {
+    margin-bottom: 32px;
+  }
+
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.team-list__item-descr {
+  padding-bottom: 16px;
+
+  .body-1 {
+    max-width: 300px;
+  }
+}
+
+.team-list__item-position {
+  margin-bottom: 24px;
+}
+
+/* end   LIST */
+
+/* begin SLIDER */
+.team-slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-slider {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+
+  @include min(768) {
+    padding-bottom: 145px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    width: 8%;
+    height: calc(100% - 80px);
+    content: '';
+    pointer-events: none;
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .00) 100%);
+
+    @include min(768) {
+      width: 15%;
+      height: calc(100% - 145px);
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.team-slider__slide {
+  overflow: hidden;
+  border-radius: 16px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    @include min(768) {
+      height: 400px;
+    }
+    @include min(1024) {
+      height: 500px;
+    }
+  }
+}
+
+.team-slider__pagination {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  transform: translate(0, 0);
+
+  @include min(768) {
+    margin-bottom: 80px;
+  }
+}
+
+/* end   SLIDER */
