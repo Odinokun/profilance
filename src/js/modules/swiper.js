@@ -10,12 +10,12 @@ module.exports = function () {
     breakpoints: {
       580: {
         loop: false,
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 20,
       },
       768: {
         loop: false,
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
     },
