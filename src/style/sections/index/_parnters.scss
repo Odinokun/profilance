@@ -1,5 +1,7 @@
 .partners {
   padding: 64px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @include min(1024) {
     padding: 80px 0;
