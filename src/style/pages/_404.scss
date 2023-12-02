@@ -1,0 +1,33 @@
+.error {
+  .services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+
+  .services-item {
+    &:first-child {
+      justify-content: flex-start;
+      padding-top: 0;
+      border-radius: 0;
+
+      .services-item__content {
+        @include min(640) {
+          max-width: 90%;
+        }
+        @include min(1024) {
+          max-width: 500px;
+        }
+      }
+
+      .services-item__title {
+        margin-bottom: 32px;
+        text-align: left;
+      }
+
+      .btn {
+        margin-top: 32px;
+      }
+    }
+  }
+}
