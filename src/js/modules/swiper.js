@@ -23,7 +23,6 @@ module.exports = function () {
   });
 
   const heroSlider = new Swiper("#hero-slider", {
-
     effect: "fade",
     autoplay: {
       delay: 4000,

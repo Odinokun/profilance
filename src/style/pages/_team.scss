@@ -1,19 +1,17 @@
 .team-hero {
-  .container {
-    position: relative;
+  position: relative;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 85%;
-      content: '';
-      background-color: $secondary-almond;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    content: '';
+    background-color: $secondary-almond;
 
-      @include min(768) {
-        height: 70%;
-      }
+    @include min(768) {
+      height: 70%;
     }
   }
 }
@@ -186,8 +184,8 @@
   }
 
   img {
+    display: block;
     width: 100%;
-    height: 420px;
     object-fit: cover;
     object-position: center;
   }

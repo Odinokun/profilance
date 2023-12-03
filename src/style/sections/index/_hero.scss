@@ -207,6 +207,7 @@
   display: flex;
   overflow: hidden;
   flex-direction: column-reverse;
+  height: auto;
   width: 100%;
   border-radius: 0 0 16px 16px;
   background-color: $primary-green;
@@ -222,6 +223,7 @@
   overflow: hidden;
   width: 100%;
   border-radius: 16px;
+  flex: none;
 
   @include min(1024) {
     transform: translateY(50px);
