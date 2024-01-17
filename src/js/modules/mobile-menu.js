@@ -1,7 +1,6 @@
 module.exports = function () {
 
-  $('.menu-mobile-nav__main-link').on('click', function (e) {
-    e.preventDefault();
+  $('.menu-mobile-nav__main-link').on('click', function () {
     $(this).toggleClass('active');
     $(this).next().slideToggle();
   });
