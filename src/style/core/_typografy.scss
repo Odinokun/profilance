@@ -2,29 +2,29 @@
 .h2,
 .h3,
 .h4 {
-  font-family: $barlow;
-  font-weight: 500;
+  font-family: $oswald;
+  font-weight: 400;
   font-style: normal;
   line-height: 1;
   color: $primary-green;
 }
 
 .h1 {
-  @include responsive-font(64, 48);
+  @include responsive-font(56, 42);
 }
 
 .h2 {
-  @include responsive-font(48, 40);
+  @include responsive-font(42, 33);
 }
 
 .h3 {
-  @include responsive-font(36, 32);
+  @include responsive-font(31, 28);
 }
 
 .h4 {
   font-weight: 400;
 
-  @include responsive-font(32, 24);
+  @include responsive-font(27, 21);
 }
 
 .overline {
@@ -54,23 +54,23 @@
 }
 
 .quotes-1 {
-  font-family: $barlow;
+  font-family: $oswald;
   font-weight: 300;
   font-style: normal;
   line-height: 1.2;
   text-transform: uppercase;
 
-  @include responsive-font(44, 36);
+  @include responsive-font(38, 31);
 }
 
 .quotes-2 {
-  font-family: $barlow;
+  font-family: $oswald;
   font-weight: 300;
   font-style: normal;
   line-height: 1.2;
   text-transform: uppercase;
 
-  @include responsive-font(32, 24);
+  @include responsive-font(28, 21);
 }
 
 .links {
@@ -103,8 +103,8 @@
   h2,
   h3,
   h4 {
-    font-family: $barlow;
-    font-weight: 500;
+    font-family: $oswald;
+    font-weight: 400;
     font-style: normal;
     line-height: 1;
     margin-bottom: 24px;
@@ -115,21 +115,21 @@
   }
 
   h1 {
-    @include responsive-font(64, 48);
+    @include responsive-font(56, 42);
   }
 
   h2 {
-    @include responsive-font(48, 40);
+    @include responsive-font(42, 33);
   }
 
   h3 {
-    @include responsive-font(36, 32);
+    @include responsive-font(31, 28);
   }
 
   h4 {
     font-weight: 400;
 
-    @include responsive-font(32, 24);
+    @include responsive-font(27, 21);
   }
 
   p {
@@ -164,11 +164,13 @@
     }
   }
 }
+
 .article__right,
-.treatments__right{
+.treatments__right {
   a {
     text-decoration: underline;
     color: inherit;
+
     &:hover {
       color: $primary-gold;
     }
@@ -177,7 +179,7 @@
 
 /* begin OL */
 .article__right,
-.treatments__right{
+.treatments__right {
   ol {
     margin: 0 0 24px 0;
     padding: 0 0 0 44px;
@@ -189,7 +191,8 @@
       position: relative;
       margin-bottom: 18px;
       padding-top: 6px;
-      p{
+
+      p {
         margin-bottom: 0;
       }
 
@@ -216,11 +219,12 @@
     }
   }
 }
+
 /* end   OL */
 
 /* begin UL */
 .article__right,
-.treatments__right{
+.treatments__right {
   ul {
     margin: 0 0 24px 0;
     padding: 0;
@@ -230,7 +234,8 @@
       position: relative;
       margin-bottom: 16px;
       padding-left: 17px;
-      p{
+
+      p {
         margin-bottom: 0;
       }
 
@@ -251,4 +256,5 @@
     }
   }
 }
+
 /* end   UL */
