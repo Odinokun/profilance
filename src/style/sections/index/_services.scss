@@ -158,3 +158,8 @@
 .services-item__text {
   color: $secondary-body-text-1;
 }
+
+.search-services {
+  display: flex;
+  flex-wrap: wrap;
+}

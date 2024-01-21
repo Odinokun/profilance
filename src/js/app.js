@@ -7,5 +7,6 @@ $(function() {
   require('./modules/mobile-menu')();
   require('./modules/copy')();
   require('./modules/shared')();
+  require('./modules/search-menu')();
 
 });

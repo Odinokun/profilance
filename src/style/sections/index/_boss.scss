@@ -27,7 +27,6 @@
   @include min(1440) {
     padding: 56px 80px;
   }
-
 }
 
 .boss-slogan__text {
@@ -150,6 +149,13 @@
   }
 }
 
+.search {
+  .boss-banner {
+    margin-bottom: 64px;
+  }
+}
+
+.search,
 .glossary,
 .article,
 .post-banner {

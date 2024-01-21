@@ -1,0 +1,72 @@
+mixin item(title, image)
+  //begin services-item
+  a(href="/").services-item
+    .services-item__image
+      img(src="assets/img/service-" + image + ".jpg" alt=title)
+    .h3.services-item__title-sm= title
+  //end services-item
+
+mixin searchItem()
+  li.search-results__item
+    a(href="/").search-results__link
+      h4.h4.search-results__title Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?
+      .search-results__text.body-1 Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit. Ab alias animi at atque consectetur consequatur cum deleniti doloremque ducimus esse explicabo facere facilis fugiat id, illum laboriosam magnam modi necessitatibus nemo nisi non odit omnis perferendis placeat quaerat quasi quo quod ratione recusandae reprehenderit suscipit temporibus ut veritatis voluptas voluptates.
+      .search-results__btn
+        +svg('arr-right')
+
+//begin search
+.search#search
+  //begin search-header
+  .search-header
+    a(href="/").search-header__logo
+      img(src="assets/img/logo.png" alt="company logo")
+    .search-header__close
+      +svg('search-close')
+  //end search-header
+
+  //begin search-form
+  form.search-form#search-form
+    input(type="text" placeholder="")
+    .search-form__icon
+      +svg('search')
+    button.search-form__btn.btn
+      span Search
+
+  //end search-form
+
+  //begin search-services
+  .services
+    .container
+      +item('Nasenchirurgie', '01')
+      +item('Fehlbisse, Kieferchirurgie', '02')
+      +item('Kiefergelenks-beschwerden', '01')
+      +item('Korrektur von Unfallfolgen', '02')
+      +item('Schnarchen, Schlafapnoe', '01')
+      +item('Kieferknochen-Entzündungen', '02')
+      +item('Allgemeine Gesichtschirurgie', '01')
+      +item('Minimalinvasive Kosmetik', '02')
+  //end search-services
+
+  .container
+    include ../sections/glossary/gloss-banner
+
+  .container
+    //begin search-results
+    .search-results
+      .search-results__row
+        h2.h2.search-results__title FAQ and Articles
+        ul.search-results__list
+          +searchItem()
+          +searchItem()
+          +searchItem()
+          +searchItem()
+          +searchItem()
+      .search-results__row
+        h2.h2.search-results__title Medical Glossary
+        ul.search-results__list
+          +searchItem()
+          +searchItem()
+          +searchItem()
+
+    //end search-results
+//end search
