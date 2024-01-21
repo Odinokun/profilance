@@ -212,18 +212,26 @@
 
 /* begin RIGHT */
 .header__right {
-  display: none;
+  display: flex;
+  align-items: center;
 
-  @include min(768) {
-    display: flex;
-    align-items: center;
+  & > .btn {
+    display: none;
+
+    @include min(768) {
+      display: block;
+    }
   }
 }
 
 /* begin LANG */
 .header-lang {
   position: relative;
-  margin-right: 16px;
+  display: none;
+
+  @include min(768) {
+    display: block;
+  }
 
   * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -339,4 +347,39 @@ a.ui-button:active {
 }
 
 /* end   LANG */
+
+/* begin SEARCH */
+.search-btn {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border-radius: 8px;
+  background-color: transparent;
+
+  @include min(768) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover {
+    background-color: #002e32;
+  }
+
+  svg {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* end   SEARCH */
 /* end   RIGHT */
