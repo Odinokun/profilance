@@ -1,4 +1,4 @@
-mixin item(title, image)
+mixin itemSearchImage(title, image)
   //begin services-item
   a(href="/").services-item
     .services-item__image
@@ -6,10 +6,10 @@ mixin item(title, image)
     .h3.services-item__title-sm= title
   //end services-item
 
-mixin searchItem()
+mixin searchItem(title)
   li.search-results__item
     a(href="/").search-results__link
-      h4.h4.search-results__title Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?
+      h4.h4.search-results__title #{title}
       .search-results__text.body-1 Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit. Ab alias animi at atque consectetur consequatur cum deleniti doloremque ducimus esse explicabo facere facilis fugiat id, illum laboriosam magnam modi necessitatibus nemo nisi non odit omnis perferendis placeat quaerat quasi quo quod ratione recusandae reprehenderit suscipit temporibus ut veritatis voluptas voluptates.
       .search-results__btn
         +svg('arr-right')
@@ -37,14 +37,14 @@ mixin searchItem()
   //begin search-services
   .services
     .container
-      +item('Nasenchirurgie', '01')
-      +item('Fehlbisse, Kieferchirurgie', '02')
-      +item('Kiefergelenks-beschwerden', '01')
-      +item('Korrektur von Unfallfolgen', '02')
-      +item('Schnarchen, Schlafapnoe', '01')
-      +item('Kieferknochen-Entzündungen', '02')
-      +item('Allgemeine Gesichtschirurgie', '01')
-      +item('Minimalinvasive Kosmetik', '02')
+      +itemSearchImage('Nasenchirurgie', '01')
+      +itemSearchImage('Fehlbisse, Kieferchirurgie', '02')
+      +itemSearchImage('Kiefergelenks-beschwerden', '01')
+      +itemSearchImage('Korrektur von Unfallfolgen', '02')
+      +itemSearchImage('Schnarchen, Schlafapnoe', '01')
+      +itemSearchImage('Kieferknochen-Entzündungen', '02')
+      +itemSearchImage('Allgemeine Gesichtschirurgie', '01')
+      +itemSearchImage('Minimalinvasive Kosmetik', '02')
   //end search-services
 
   .container
@@ -56,17 +56,17 @@ mixin searchItem()
       .search-results__row
         h2.h2.search-results__title FAQ and Articles
         ul.search-results__list
-          +searchItem()
-          +searchItem()
-          +searchItem()
-          +searchItem()
-          +searchItem()
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          +searchItem('Was sind die Folgen?')
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
       .search-results__row
         h2.h2.search-results__title Medical Glossary
         ul.search-results__list
-          +searchItem()
-          +searchItem()
-          +searchItem()
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
+          +searchItem('Was sind die Folgen, wenn ein Fehlbiss nicht behandelt wird?')
 
     //end search-results
 //end search
