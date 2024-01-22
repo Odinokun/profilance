@@ -68,10 +68,14 @@ svg {
 }
 
 .main-wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  -webkit-overflow-scrolling: touch;
+
+  &.overflow {
+    overflow: hidden;
+  }
 }
 
 .main {
@@ -80,10 +84,6 @@ svg {
 
   @include min(768) {
     padding-top: 110px;
-  }
-
-  &.overflow {
-    overflow: hidden;
   }
 }
 
