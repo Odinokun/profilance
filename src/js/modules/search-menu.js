@@ -13,13 +13,15 @@ module.exports = function () {
   });
 
   $('.search-btn').on('click', function () {
-    $('.search').fadeIn();
-    $('.main').addClass('overflow');
+    $('.search').fadeIn(300);
+    $('.main-wrap').addClass('overflow');
   });
 
   $('.search-header__close').on('click', function () {
-    $('.search').fadeOut();
-    $('.main').removeClass('overflow');
+    $('.search').fadeOut(300);
+    setTimeout(function () {
+      $('.main-wrap').removeClass('overflow');
+    }, 150);
   });
 
 };
