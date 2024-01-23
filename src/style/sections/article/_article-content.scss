@@ -1,10 +1,22 @@
 .article-content {
   display: flex;
+  flex-direction: column-reverse;
   padding-top: 40px;
   padding-bottom: 40px;
 
   @include min(1024) {
+    flex-direction: row;
     padding-bottom: 80px;
+  }
+
+  .article__left {
+    display: block;
+    padding-right: 0;
+
+    @include min(1024) {
+      width: 400px;
+      padding-right: 70px;
+    }
   }
 }
 
@@ -27,10 +39,14 @@
 
 .article-left__menu {
   margin-bottom: 8px;
-  padding: 24px;
+  padding: 24px 24px 12px 24px;
   border: 1px solid $secondary-buff;
   border-radius: 16px;
   background-color: $secondary-almond;
+
+  @include min(1024) {
+    padding: 24px;
+  }
 }
 
 .article-left__menu-title {
