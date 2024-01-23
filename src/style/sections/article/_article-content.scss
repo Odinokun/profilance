@@ -11,10 +11,12 @@
 
   .article__left {
     display: block;
+    margin-top: 16px;
     padding-right: 0;
 
     @include min(1024) {
       width: 400px;
+      margin-top: 0;
       padding-right: 70px;
     }
   }

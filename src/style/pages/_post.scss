@@ -20,10 +20,12 @@
 
     .treatments__left {
       display: block;
+      margin-top: -48px;
       padding-right: 0;
 
       @include min(1024) {
         width: 400px;
+        margin-top: 0;
         padding-right: 70px;
       }
     }

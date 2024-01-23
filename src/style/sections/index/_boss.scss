@@ -9,6 +9,14 @@
       padding: 0 80px;
     }
   }
+
+  .boss-banner {
+    border-radius: 0;
+
+    @include min(1024) {
+      border-radius: 16px;
+    }
+  }
 }
 
 /* begin SLOGAN */
@@ -43,13 +51,11 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
+  border-radius: 16px;
   background-color: #f3e6d9;
 
   @include min(768) {
     display: block;
-  }
-  @include min(1024) {
-    border-radius: 16px;
   }
 }
 
