@@ -35,10 +35,14 @@
 
 .treatments-left__menu {
   margin-bottom: 8px;
-  padding: 24px;
+  padding: 24px 24px 12px 24px;
   border: 1px solid $secondary-buff;
   border-radius: 16px;
   background-color: $primary-white;
+
+  @include min(1024) {
+    padding: 24px;
+  }
 }
 
 .treatments-left__menu-title {
