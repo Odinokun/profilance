@@ -56,6 +56,18 @@
   }
 }
 
+.btn--outline-gold {
+  color: $primary-gold;
+  border-color: $primary-gold;
+  background-color: transparent;
+
+  &:hover {
+    color: $primary-white;
+    border-color: $primary-gold;
+    background-color: $primary-gold;
+  }
+}
+
 .btn--white {
   color: $primary-gold;
   background-color: $primary-white;

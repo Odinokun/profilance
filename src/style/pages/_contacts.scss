@@ -23,6 +23,9 @@
 
     .body-1 {
       margin-bottom: 32px;
+    }
+    .btn {
+      margin-bottom: 32px;
 
       @include min(1024) {
         margin-bottom: 40px;
@@ -31,9 +34,15 @@
   }
 }
 
+.contacts__item {
+  padding-top: 53px;
+}
+
+// begin RIGHT
 .contacts__right {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @include min(640) {
     flex-direction: row;
@@ -43,6 +52,7 @@
   }
 
   .contacts__item {
+    width: 30%;
     padding-top: 40px;
 
     @include min(1024) {
@@ -72,17 +82,49 @@
     .body-1 {
       margin-bottom: 32px;
       color: $secondary-body-text-1;
-
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
+  .contacts__item-lg {
+    a {
+      color: $primary-gold;
+    }
+  }
 }
 
-.contacts__item {
-  padding-top: 53px;
+.contacts__item-lg {
+  width: 100%;
+  .contacts__title {
+    color: $primary-gold;
+  }
+  .body-1 {
+    margin-bottom: 32px;
+    color: $secondary-body-text-1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .btn {
+    margin-bottom: 32px;
+  }
+  ul {
+    padding-left: 16px;
+    list-style: square;
+    li {
+      font-family: $mont;
+      font-size: 14px;
+      margin-bottom: 16px;
+      padding-left: 10px;
+      color: #636a6a;
+      &::marker {
+        color: $primary-gold;
+      }
+    }
+  }
 }
+// end RIGHT
 
 .contacts__links {
   margin-bottom: 48px;
