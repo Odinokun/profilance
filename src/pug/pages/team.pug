@@ -47,6 +47,15 @@ block content
                 source(media="(min-width: 1024px)", srcset="assets/img/team-hero@2x.jpg")
                 source(srcset="assets/img/team-hero.jpg")
                 img(src="assets/img/team-hero.jpg", alt="Image")
+            a(
+              href="https://www.youtube.com/watch?v=LXb3EKWsInQ" 
+              data-fancybox="fancy-1").team-hero__play
+              +svg('play')
+            a(
+              href="https://www.youtube.com/watch?v=LXb3EKWsInQ" 
+              data-fancybox="fancy-2").team-hero__yt
+              img(src="assets/img/yt-play.svg", alt="btn")
+              span Allow us to introduce our team
       //end team-hero
 
       //begin team-text
